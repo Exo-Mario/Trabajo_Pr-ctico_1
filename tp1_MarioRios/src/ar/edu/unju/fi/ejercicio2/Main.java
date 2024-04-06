@@ -22,4 +22,5 @@ public class Main {
 		System.out.println("Número de telofono: "+telefono);
 		System.out.println("coseno de 0.5: "+coseno);
 	}
+
 }
