@@ -18,6 +18,9 @@ public class Main {
 		} else {
 			System.out.println(numAlmacenado+" es un número impar. Su doble es "+numAlmacenado*2);
 		}
+		
+		// Cerrar el Scanner
+		sc.close();
 
 	}
 }
