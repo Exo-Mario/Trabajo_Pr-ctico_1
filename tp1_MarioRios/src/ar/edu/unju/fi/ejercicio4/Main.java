@@ -9,13 +9,14 @@ public class Main {
 		// Declarar Variables y Scanner
 		Scanner sc = new Scanner(System.in);
 		int numero,aux;
-		System.out.println("Ingrese número: ");
+		System.out.println("Ingrese número comprendido entre 0 y 10: ");
 		numero = sc.nextInt();
 		aux=1;
 		
 		// Verificar el rango de numero
 		while(numero>10 || numero <0) {
 			System.out.println("El número introducido es mayor que 10 o menor que 0. Acción invalidada");
+			System.out.println("Ingrese número comprendido entre 0 y 10: ");
 			numero=sc.nextInt();
 		}
 				
