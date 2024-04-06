@@ -8,6 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Creación del Scanner
 		Scanner sc = new Scanner(System.in);
 
         // Creación de objeto Persona utilizando constructor por defecto
@@ -38,6 +39,7 @@ public class Main {
         System.out.println("-------- DATOS --------");
         persona2.mostrarDatos();
 
+        // Cerramos el Scanner
         System.out.println();
 
         // Creación de objeto Persona utilizando constructor con dni, nombre y fecha de nacimiento
