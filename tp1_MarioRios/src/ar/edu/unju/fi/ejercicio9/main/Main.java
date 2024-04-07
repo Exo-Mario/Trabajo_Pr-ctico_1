@@ -11,27 +11,28 @@ public class Main {
 		System.out.println("Ingrese 3 productos a continuación");
 		System.out.println();
 		
-		for(int i=1;i<4;i++) {
-		System.out.println("Ingrese nombre del producto: ");
-		String nombre = sc.next();
-		System.out.println("Ingrese código del producto: ");
-		int codigo = sc.nextInt();
-		System.out.println("Ingrese precio del producto: $");
-		double precio = sc.nextDouble();
-		System.out.println("Ingrese descuento del producto: [entre 0% y 50%]");
-		int descuento = sc.nextInt();
-		while(descuento>50 || descuento<0) {
+		for(int i=0;i<3;i++) {
+			Producto producto = new Producto();
+			
+			System.out.println("Ingrese nombre del producto: ");
+			producto.setNombre(sc.nextLine());
+			System.out.println("Ingrese código del producto: ");
+			producto.setCodigo(sc.nextInt());
+			System.out.println("Ingrese precio del producto: $");
+			producto.setPrecio(sc.nextDouble());
+			System.out.println("Ingrese descuento del producto: [entre 0% y 50%]");
+			producto.setDescuento(sc.nextInt());
+			
+		while(producto.getDescuento()>50 || producto.getDescuento()<0) {
 			System.out.println("Ingrese nuevamente el valor: ");
-			descuento = sc.nextInt();
+			producto.setDescuento(sc.nextInt());
 		}
 		
-		Producto producto = new Producto(nombre,codigo,precio,descuento);
+		sc.nextLine(); //Consumir la linea que le seguiría al nextInt()
 		System.out.println();
-		System.out.println("----- Factura del "+i+"° producto -----");
+		System.out.println("----- Factura del "+(i+1)+"° producto -----");
 		producto.mostrarDatos();
 		}
-		
 		sc.close();
 	}
-
 }

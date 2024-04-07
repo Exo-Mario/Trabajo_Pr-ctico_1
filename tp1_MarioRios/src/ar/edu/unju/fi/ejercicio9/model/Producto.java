@@ -12,14 +12,6 @@ public class Producto {
 		// TODO Auto-generated constructor stub
 	}
 
-	// Constructor parametrizado
-	public Producto(String nombre, int codigo, double precio, int descuento) {
-		this.nombre = nombre;
-		this.codigo = codigo;
-		this.precio = precio;
-		this.descuento = descuento;
-	}
-
 	// Métodos accesores
 	public String getNombre() {
 		return nombre;
